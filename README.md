@@ -45,4 +45,4 @@ VITE_WEATHER_KEY=https://api.openweathermap.org/geo/1.0
 npm run start
 ```
 
-The app will be available at http://localhost:5173/.
+The app will be available at http://localhost:5173/
