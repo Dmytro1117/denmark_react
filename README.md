@@ -18,7 +18,7 @@
 ### 1. **Clone the repository:**
 
 ```bash
-   git clone https://github.com
+   git clone https://github.com/Dmytro1117/denmark_react.git
 ```
 
 ### 2. **Install dependencies:**
@@ -35,16 +35,14 @@ Create a `.env` file in the root directory and add your backend connection and A
 VITE_API_BASE_URL=http://localhost:8080/api
 ```
 
-    ```env
-
+```env
 VITE_WEATHER_KEY=https://api.openweathermap.org/geo/1.0
-
-````
+```
 
 ### 4. **Run the application:**
 
 ```bash
 npm run start
-````
+```
 
 The app will be available at http://localhost:5173/.
