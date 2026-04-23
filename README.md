@@ -32,11 +32,11 @@
 Create a `.env` file in the root directory and add your backend connection and API-Weather:
 
 ```env
-VITE_API_BASE_URL=http://localhost:8080/api
+VITE_BASE_BACKEND_URL=https://denmark-api-node-js.onrender.com
 ```
 
 ```env
-VITE_WEATHER_KEY=https://api.openweathermap.org/geo/1.0
+VITE_WEATHER_KEY=your_key_from_https://api.openweathermap.org/geo/1.0
 ```
 
 ### 4. **Run the application:**

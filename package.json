@@ -1,8 +1,14 @@
 {
   "name": "denmark_react",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "author": "Dmytro1117 (https://github.com/Dmytro1117)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dmytro1117/denmark_react"
+  },
+  "license": "ISC",
   "scripts": {
     "start": "vite --open",
     "build": "vite build",

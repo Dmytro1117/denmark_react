@@ -244,10 +244,6 @@ export const Gallery = () => {
                     onDelete={setDeleteId}
                   />
                 ))}
-                <ServerError
-                  error={globalPageError}
-                  isVisible={!isUploadModalOpen}
-                />
               </GridContainer>
             </AnimatePresence>
 
@@ -296,6 +292,8 @@ export const Gallery = () => {
           />
         </Suspense>
       )}
+
+      <ServerError error={globalPageError} isVisible={!isUploadModalOpen} />
     </PageSection>
   );
 };
