@@ -11,16 +11,27 @@ export const SocialBar = ({ isMobileMenu }) => {
       <IconWrapper
         href="https://github.com/Dmytro1117"
         target="_blank"
+        rel="noopener noreferrer"
         title="GitHub"
       >
         <SiGithub size={24} />
       </IconWrapper>
 
-      <IconWrapper href="https://youtube.com" target="_blank" title="Youtube">
+      <IconWrapper
+        href="https://www.youtube.com/watch?v=DYqE3M_xdCc"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Youtube"
+      >
         <TfiYoutube size={24} />
       </IconWrapper>
 
-      <IconWrapper href="https://facebook.com" target="_blank" title="Facebook">
+      <IconWrapper
+        href="https://www.facebook.com/profile.php?id=100079733889796"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Facebook"
+      >
         <FaSquareFacebook size={20} />
       </IconWrapper>
 
