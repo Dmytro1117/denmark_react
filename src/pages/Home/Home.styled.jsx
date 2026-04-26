@@ -31,8 +31,8 @@ export const HomeContentContainer = styled(PageContainer)`
 
 export const AnimatedDescWrapper = styled(motion.div)`
   position: absolute;
-  right: 140px;
-  top: 12vh;
+  right: 17vh;
+  top: 13vh;
   z-index: ${({ theme }) => theme.zIndex.content};
   width: 500px;
   padding: ${({ theme }) => theme.spacing.md};
@@ -54,8 +54,8 @@ export const AnimatedDescWrapper = styled(motion.div)`
   border-radius: ${({ theme }) => theme.radius.md};
 
   ${({ theme }) => theme.media.tabletOnly} {
-    right: 100px;
-    top: 85px;
+    right: 14vh;
+    top: 12vh;
     width: 450px;
   }
 

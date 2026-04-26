@@ -15,7 +15,7 @@ export const Backdrop = styled(motion.div)`
       : theme.colors.overlayStrong};
 
   backdrop-filter: ${({ theme }) =>
-    theme.themeMode === "light" ? "blur(6px)" : "none"};
+    theme.themeMode === "light" ? "blur(6px)" : "blur(8px)"};
 
   ${({ theme }) => theme.media.mobileOnly} {
     background-color: ${({ theme }) => theme.colors.bgGlass};

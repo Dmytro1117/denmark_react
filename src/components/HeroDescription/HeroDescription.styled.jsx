@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const DescWrapper = styled.div`
   position: absolute;
-  left: 6vw;
-  bottom: 10vh;
+  left: 8vw;
+  bottom: 12vh;
   z-index: ${({ theme }) => theme.zIndex.content};
   max-width: 600px;
   color: ${({ theme }) => theme.colors.textSecondary};
@@ -26,8 +26,10 @@ export const DescWrapper = styled.div`
 
   ${({ theme }) => theme.media.tabletOnly} {
     padding: ${({ theme }) => theme.spacing.md};
-    left: 55px;
-    bottom: 65px;
+    // left: 70px;
+    // bottom: 105px;
+    left: 7vw;
+    bottom: 10vh;
     max-width: 550px;
   }
 
