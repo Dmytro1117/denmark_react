@@ -4,9 +4,10 @@ import { EmptyWrapper, Title, Text, StaticOverlay } from "./EmptyPage.styled";
 export const EmptyPage = ({
   title = "Information",
   text = "The content is currently empty.",
+  variant = "overlay",
 }) => {
   return (
-    <StaticOverlay>
+    <StaticOverlay $variant={variant}>
       <EmptyWrapper
         variants={fadeVariants}
         initial="initial"

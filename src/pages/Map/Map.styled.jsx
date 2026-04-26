@@ -40,7 +40,7 @@ export const MapContentContainer = styled(PageContainer)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 10px 40px;
+    padding: 100px 10px 80px;
   }
 `;
 

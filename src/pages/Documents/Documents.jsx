@@ -197,6 +197,7 @@ export const Documents = () => {
           <EmptyPage
             title="National Documents is empty"
             text="Add your first document"
+            variant="inline"
           />
         ) : (
           <DataGrid>

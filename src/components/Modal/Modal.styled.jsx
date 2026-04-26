@@ -180,7 +180,7 @@ export const CloseButton = styled.button`
 
   ${({ theme }) => theme.media.mobileOnly} {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 20px;
     font-size: 28px;
     color: ${({ theme }) => theme.colors.textMain};

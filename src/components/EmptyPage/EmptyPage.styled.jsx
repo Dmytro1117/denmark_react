@@ -2,17 +2,32 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const StaticOverlay = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   display: flex;
   justify-content: center;
-  pointer-events: none;
+
+  ${({ $variant }) =>
+    $variant === "overlay"
+      ? `
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      `
+      : `
+        position: relative;
+        align-items: center;
+        padding: 40px 0;
+      `}
+
+  ${({ theme }) => theme.media.tabletOnly} {
+    padding: 20px 0;
+  }
 
   ${({ theme }) => theme.media.mobileOnly} {
-    padding: 10px;
+    order: 1;
+    padding: 0;
   }
 `;
 
