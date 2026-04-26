@@ -16,7 +16,8 @@ export const FooterContainer = styled.footer`
       ? `linear-gradient(
           to right,
           transparent 0%,
-          rgba(255, 255, 255, 0.45) 50%,
+          rgba(255, 255, 255, 0.45) 45%, 
+          rgba(255, 255, 255, 0.45) 65%, 
           transparent 100%
         )`
       : "transparent"};
