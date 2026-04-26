@@ -51,6 +51,20 @@ export const EmptyWrapper = styled(motion.div)`
       : `2px solid ${theme.colors.secondaryBordeaux}`};
   border-radius: ${({ theme }) => theme.radius.sm};
 
+  cursor: ${({ $isClickable }) => ($isClickable ? "pointer" : "default")};
+
+  ${({ $isClickable, theme }) =>
+    $isClickable &&
+    `
+    &:hover {
+     background: ${
+       theme.themeMode === "dark"
+         ? theme.colors.bgGlass
+         : theme.colors.borderStrong
+     };
+    }
+  `}
+
   ${({ theme }) => theme.media.tabletOnly} {
     max-width: 716px;
     padding: 60px 20px;

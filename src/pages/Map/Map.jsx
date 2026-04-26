@@ -185,6 +185,7 @@ export const Map = () => {
                           <EmptyPage
                             title="The Map is empty"
                             text="Add your first marker"
+                            onClick={() => toggleMode("add")}
                           />
                         )}
                     </MapFrame>

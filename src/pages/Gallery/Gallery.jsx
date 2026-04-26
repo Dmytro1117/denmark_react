@@ -204,12 +204,15 @@ export const Gallery = () => {
                   <StyledButton onClick={handleUploadClick}>
                     + Add Photo
                   </StyledButton>
-                  <StyledButton
-                    active={mode === "delete"}
-                    onClick={toggleDeleteMode}
-                  >
-                    Delete
-                  </StyledButton>
+
+                  {images.length > 0 && (
+                    <StyledButton
+                      active={mode === "delete"}
+                      onClick={toggleDeleteMode}
+                    >
+                      Delete
+                    </StyledButton>
+                  )}
                 </>
               )}
             </>
@@ -219,7 +222,11 @@ export const Gallery = () => {
         {!showContent && !serverError ? (
           <Loader fullscreen={false} />
         ) : isEmptyGallery ? (
-          <EmptyPage title="The gallery is empty" text="Add your first photo" />
+          <EmptyPage
+            title="The gallery is empty"
+            text="Add your first photo"
+            onClick={handleUploadClick}
+          />
         ) : (
           <GalleryWrapper>
             <AnimatePresence mode="wait">

@@ -5,10 +5,13 @@ export const EmptyPage = ({
   title = "Information",
   text = "The content is currently empty.",
   variant = "overlay",
+  onClick,
 }) => {
   return (
     <StaticOverlay $variant={variant}>
       <EmptyWrapper
+        onClick={onClick}
+        $isClickable={!!onClick}
         variants={fadeVariants}
         initial="initial"
         animate="animate"

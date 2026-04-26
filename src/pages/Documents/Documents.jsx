@@ -198,6 +198,7 @@ export const Documents = () => {
             title="National Documents is empty"
             text="Add your first document"
             variant="inline"
+            onClick={() => setModalAddOpen(true)}
           />
         ) : (
           <DataGrid>
