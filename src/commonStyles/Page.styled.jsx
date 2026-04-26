@@ -24,7 +24,7 @@ export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px 80px;
+    padding: 90px 20px 80px;
     height: auto;
   }
 `;

@@ -234,6 +234,7 @@ export const ControlPanel = styled.div`
     border-top: none;
     gap: 12px;
     padding-top: 0;
+    padding-bottom: 20px;
 
     button {
       margin: 0 auto;
