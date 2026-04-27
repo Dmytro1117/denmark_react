@@ -40,7 +40,6 @@ export const AvatarBox = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(0.6) contrast(1.1);
   }
 
   ${({ theme }) => theme.media.mobileOnly} {

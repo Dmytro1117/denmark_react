@@ -64,19 +64,14 @@ export const GalleryTabsWrapper = styled.div`
   ${({ theme }) => theme.media.mobileOnly} {
     position: static;
     order: 2;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
-    max-width: 400px;
-    margin: 24px auto;
-    gap: 4px;
+
+    flex-direction: column;
+    align-items: center;
+    margin-top: ${({ theme }) => theme.spacing.lg};
 
     button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 200px;
-      padding: 0 20px;
+      flex: none;
     }
   }
 `;

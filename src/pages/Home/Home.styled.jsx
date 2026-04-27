@@ -288,10 +288,9 @@ export const ProfileAvatarWrap = styled(motion.div)`
     margin: 0 auto ${({ theme }) => theme.spacing.md};
     border-radius: 50%;
     border: 2px solid ${({ theme }) => theme.colors.primaryBlue};
-    box-shadow: ${({ theme }) => theme.shadows.glow};
+    box-shadow: ${({ theme }) => theme.shadows.medium};
     mask-image: none;
     -webkit-mask-image: none;
-    pointer-events: auto;
 
     &::after {
       display: none;
@@ -303,12 +302,6 @@ export const ProfileAvatar = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(0.4) brightness(0.5);
-
-  ${ProfileAvatarWrap}:hover & {
-    filter: grayscale(0) brightness(1);
-    transform: scale(1.05);
-  }
 `;
 
 export const MiniProgressRow = styled.div`

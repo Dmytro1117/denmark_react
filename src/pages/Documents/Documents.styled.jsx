@@ -96,7 +96,7 @@ export const DocumentTabsWrapper = styled.div`
   ${({ theme }) => theme.media.mobileOnly} {
     min-height: 215px;
     order: 1;
-    margin: 20px 0;
+    margin: 12px 0;
     gap: ${({ theme }) => theme.spacing.lg};
     & > div:first-child {
       max-width: 400px;
@@ -350,6 +350,7 @@ export const ModeButtons = styled.div`
 
   ${({ theme }) => theme.media.mobileOnly} {
     flex-direction: column;
+
     button {
       width: 100% !important;
       flex: none;
