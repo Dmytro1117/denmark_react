@@ -37,7 +37,7 @@ export const Button = styled.button`
     inset: 0;
     z-index: -1;
     border-radius: ${({ theme }) => theme.radius.sm};
-    box-shadow: ${({ theme }) => theme.shadows.medium};
+    box-shadow: ${({ theme }) => theme.shadows.soft};
 
     background: ${({ theme, $active, $variant }) => {
       if ($variant === "danger" && theme.themeMode === "light") {

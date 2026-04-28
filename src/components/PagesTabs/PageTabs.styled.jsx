@@ -16,7 +16,7 @@ export const TabsContainer = styled.div`
         : theme.colors.borderStrong};
 
   border-radius: ${({ theme }) => theme.radius.sm};
-  box-shadow: ${({ theme }) => theme.shadows.medium};
+  box-shadow: ${({ theme }) => theme.shadows.soft};
   transition: border-right-color ${({ theme }) => theme.transitions.normal};
 
   border-right: ${({ theme, $activeColor }) =>
