@@ -18,7 +18,7 @@ export const SocialBar = ({ isMobileMenu }) => {
       </IconWrapper>
 
       <IconWrapper
-        href="https://www.youtube.com/watch?v=DYqE3M_xdCc"
+        href="https://www.youtube.com/watch?v=1oa1hi_Ib4g"
         target="_blank"
         rel="noopener noreferrer"
         title="Youtube"
