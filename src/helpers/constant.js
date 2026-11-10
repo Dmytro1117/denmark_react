@@ -65,4 +65,5 @@ export const countryDataLabels = {
   driveSide: "DRIVING SIDE",
   tld: "WEB DOMAIN",
   weekStart: "WEEK START",
+  description: "DESCRIPTION",
 };

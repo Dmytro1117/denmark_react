@@ -1,7 +1,8 @@
 import axios from "axios";
 import { countryOptions } from "../helpers/constant";
 
-const WEATHER_KEY = "fad9e8bcd1a34f58e68e0530143ae3bb";
+const RESTCOUNTRIES_KEY = import.meta.env.VITE_RESTCOUNTRIES_KEY;
+const WEATHER_KEY = import.meta.env.VITE_WEATHER_KEY;
 
 export const getCountryData = async (name) => {
   try {
@@ -15,25 +16,44 @@ export const getCountryData = async (name) => {
     }
 
     const { data } = await axios.get(
-      `https://restcountries.com/v3.1/name/${trimmed}?fullText=true`,
+      `https://api.restcountries.com/countries/v5?names.common=${trimmed}&strict=true`,
+      {
+        headers: {
+          Authorization: `Bearer ${RESTCOUNTRIES_KEY}`,
+        },
+      },
     );
 
-    const info = data[0];
+    const info = data?.data?.objects?.find(
+      (item) => item.names?.common?.toLowerCase() === trimmed.toLowerCase(),
+    );
+
+    if (!info) {
+      return {
+        error: `Country "${trimmed}" not found`,
+        type: "not_found",
+      };
+    }
 
     return {
       data: {
-        officialName: info.name.official,
-        capital: info.capital?.[0],
-        region: `${info.region} / ${info.subregion}`,
-        population: info.population.toLocaleString(),
-        area: `${info.area.toLocaleString()} KM²`,
-        currency: `${Object.values(info.currencies)[0].name} (${Object.values(info.currencies)[0].symbol})`,
-        languages: Object.values(info.languages).join(", "),
-        timezone: info.timezones[0],
-        driveSide: info.car.side.toUpperCase(),
-        tld: info.tld[0],
-        weekStart: info.startOfWeek.toUpperCase(),
-        coatOfArms: info.coatOfArms.svg,
+        officialName: info.names?.official,
+        capital: info.capitals?.[0]?.name,
+        region: [info.region, info.subregion].filter(Boolean).join(" / "),
+        population: info.population?.toLocaleString(),
+        area: info.area?.kilometers?.toLocaleString()
+          ? `${info.area.kilometers.toLocaleString()} KM²`
+          : null,
+        currency: info.currencies
+          ? `${info.currencies[0].name} (${info.currencies[0].symbol || info.currencies[0].code})`
+          : null,
+        languages: info.languages?.map((lang) => lang.name).join(", "),
+        timezone: info.timezones?.[0],
+        driveSide: info.cars?.driving_side?.toUpperCase(),
+        tld: info.tlds?.[0],
+        weekStart: info.date?.start_of_week?.toUpperCase(),
+        coatOfArms: info.flag?.url_svg,
+        description: info.descriptions?.short,
       },
     };
   } catch (error) {
