@@ -29,7 +29,7 @@
 
 ### 3. **Configure Environment Variables:**
 
-Create a `.env` file in the root directory and add your backend connection and API-Weather:
+Create a `.env` file in the root directory and add your backend connection, API Rest Countries and API-Weather:
 
 ```env
 VITE_BASE_BACKEND_URL=https://denmark-api-node-js.onrender.com
@@ -37,6 +37,10 @@ VITE_BASE_BACKEND_URL=https://denmark-api-node-js.onrender.com
 
 ```env
 VITE_WEATHER_KEY=your_key_from_https://api.openweathermap.org/geo/1.0
+```
+
+```env
+VITE_RESTCOUNTRIES_KEY=your_key_from_https://restcountries.com
 ```
 
 ### 4. **Run the application:**
